@@ -1,27 +1,714 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Sandeep Roy Personal Website</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Sandeep Roy!</h1>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:sandeep.roy1@outlook.com">email</a></li>
-        		<li><a href="https://github.com/sandeeproy1">github.com/sandeeproy1</a></li>
-			</ul>
-		</footer>
-	</body>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="shortcut icon" href="img/pic.png"/>
+    <title>Sandeep Roy</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		img.img-front {
+			margin-left: 52px;
+		}
+	</style>
+	<style type="text/css">
+		#mainBubble {
+		  box-shadow: 0 0 4px rgba(0,0,0,0);
+		  font: 0.625em sans-serif;
+		  height: 800px;
+		  position: relative;
+		  width: 100%;
+		}
+				 
+		#mainBubble svg {
+		  left: 0;
+		  position: absolute;
+		  top: 0;
+		}				 
+		#mainBubble circle.topBubble {
+		  fill: #aaa;
+		  stroke: #666;
+		  stroke-width: 1.5px;
+		 }
+    </style>
+    <script type="text/javascript" src="js/d3.min.js" charset="utf-8"></script>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Sandeep Roy</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Work</a>
+                    </li>
+					<li class="page-scroll">
+                        <a href="#skills">Skills</a>
+                    </li>
+					<li class="page-scroll">
+                        <a href="#projects">Projects</a>
+                    </li>
+					<li class="page-scroll">
+                        <a href="#education">Education</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/computer35.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Software Engineer</span>
+                        <hr class="star-light">
+                        <span class="skills">Full Stack Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Professional Experience</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/cognizant.jpg" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section id="skills">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Skills</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>		
+			<div class="row" id="mainBubble">
+				<svg class="mainBubbleSVG" width="1180" height="650"></svg>
+			</div>			
+        </div>
+    </section>
+
+	<section id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Projects</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/1-airquality.png" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/2-insurance.png" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/3-task.png" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/4-resource.png" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/5-pidtest.png" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/6-iapff.png" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/7-ffphase4.png" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+				<div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/8-m84ff.png" class="img-responsive img-front" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section class="success" id="education">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Education</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <iframe src='//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=15uup59lYTrt10hBj08ahjdMGcIJ-JfW4zpd7ON7Hr0E&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' frameborder='0'></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-lg-4">
+					<table>
+						<tr>
+							<td>
+								<img src="img/pic.png"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a target="_blank" href="Resume-Sandeep.pdf" class="btn btn-lg btn-outline">
+									<i class="fa fa-file-text"></i>&#09;&#09;View Resume
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+                <div class="col-lg-4"><!-- col-lg-offset-2"-->
+                    <p>My experience of working on Enterprise and Academic software projects; knowledge of collaborating with client, support and QA teams; have equipped me with the attributes and skills which can fuel my passion for Software Engineering and Computer Science.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>My demonstrated ability to research and develop features in existing or new products, with a passion for providing quality solutions, has been expanding my horizons! I understand the need of continuous education and learning with the advancement of technologies to provide quality solutions.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>350 E Taylor St<br>San Jose, CA 95112</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Get Connected</h3>
+                        <ul class="list-inline">
+							<li>
+                                <a target="_blank" href="https://github.com/sandeeproy1" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+							<li>
+                                <a target="_blank" href="https://www.linkedin.com/in/sandeeproy2/en" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+							<li>
+                                <a target="_blank" href="https://www.facebook.com/sandeeproy22" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md
+                    -4">
+                        <h3>Email</h3>
+                        <p>sandeep.roy1@outlook.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Cognizant Technology Solutions</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cognizant.jpg" class="img-responsive img-centered" alt="">
+							<ul style="text-align: left">
+								<li>
+									Attended training on .Net platform (C#, ASP. Net, SQL Server etc), VC++, Engineering and Manufacturing basics, Business Writing and Foreign Language (German) conducted by Cognizant Academy.
+								</li>
+								<li>
+									Actively involved in requirement analysis, design, implementation and enhancements of software.
+								</li>
+								<li>
+									Involved in doing feasibility studies and research activities to build a POC for a client (Xerox). On successful completion of the demo, led a team in the actual implementation of the application.
+								</li>
+								<li>
+									Participated in code review, software configuration management, and CMMI level 5 audit. 
+								</li>
+								<li>
+									Supervised a team of 4 members and provided knowledge transfer to newly joined team members.
+								</li>
+								<li>
+									Involved in doing feasibility studies and research activities to build a POC for client (Invensys), and demonstrated it to the client (at Foxboro, MA).
+								</li>
+								<li>
+									Received Kudos award in Q3 2013 from Banking and Financial Services vertical as a work appreciation.
+								</li>
+								<li>
+									Won 3rd place in a Hackathon conducted by Healthcare Services vertical.
+								</li>
+								<li>
+									Worked for clients which include Societe Generale, Xerox Business Services and Invensys (now Schneider Slectric) under the domains: Banking and Financial Services, and Healthcare, and Engineering and Manufacturing Solutions.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Position:
+                                    <strong>Associate (Software Developer)
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>November 2009 - August 2015
+                                    </strong>
+                                </li>
+                             </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Air Quality Mobile Sensor Cloud</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/1-airquality.png" class="img-responsive img-centered" alt="">
+                            <ul style="text-align: left">
+								<li>
+									This project was to implement, and validate a mobile sensor cloud engine to support and manage sensors (or mobile sensors) and sensor controllers and provide on-demand sensor cloud services.
+								</li>
+								<li>
+									Implemented modules to view sensor data, view sensor allocation and billing.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Technology Used:
+                                    <strong>J2EE, MySQL, Apache Tomcat, Eclipse, Amazon AWS
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Health and Welfare Administration System</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/2-insurance.png" class="img-responsive img-centered" alt="">
+                            <ul style="text-align: left">
+								<li>
+									Xerox Benefits application portfolio has multiple end-user portals. The requirement was to integrate all these portals with legacy benefits admin portal and provide same presentation interface.
+								</li>
+								<li>
+									Performed research on how to integrate various portals and demonstrated a working prototype to the client. After successful completion of the demo, led a team in the development of actual product.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Technology Used:
+                                    <strong>C#, ASP .Net, SQL Server 2010, IIS 7, Visual Studio 2010
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Task Manager</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/3-task.png" class="img-responsive img-centered" alt="">
+                            <ul style="text-align: left">
+								<li>
+									The Task Tracker is a light weight win-forms application tool that allows users to create a list of tasks to be performed on a regular basis. The application shows the active and inactive status, audit reports of a team or a team member, manage tasks and manage users.
+								</li>
+								<li>
+									Optimized a code to retrieve the list of daily/weekly tasks and attained a performance improvement of 80%.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Technology Used:
+                                    <strong>.Net framework 3.5, C#, SQL Server 2008, Visual Studio 2010, SVN
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Resource Management Tool</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/4-resource.png" class="img-responsive img-centered" alt="">
+                            <ul style="text-align: left">
+								<li>
+									This is an application tool used by Managers and CIO teams to manage the resources. This tool shows the hierarchy level in an organization who can add/depart a resource, allocate a resource to a work or to a contract or to edit the allocation of the resources.
+								</li>
+								<li>
+									Contributed to various functional enhancements and bug fixes of this application.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Technology Used:
+                                    <strong>Net framework 3.5, C#, DeveloperExpress V2011 Vol 1 (for GUI), Nhibernate (for database access), SQL Server 2008, Visual Studio 2010, SVN
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Block Test Application</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/5-pidtest.png" class="img-responsive img-centered" alt="">
+                            <ul style="text-align: left">
+								<li>
+									Block Test Application is a test automation project which tests the PID block present in the M84 Vortex FF devices. It communicates with the device and tests the Auto Tune functionality and the accuracy of the same with different data sets. Also it tests the Algorithm Convergence of the PID blocks under different block modes. It generates test reports after execution of each test case.
+								</li>
+								<li>
+									Designed and implemented a POC using an existing tool (PID Auto tuner) and demonstrated it to the client (at Foxboro, MA). After successful completion of demo, led a team in the actual implementation of this tool and contributed to the development.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Technology Used:
+                                    <strong>ANSI C, Lab Windows CVI, TFS
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>IAPFF Device Type Manager</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/6-iapff.png" class="img-responsive img-centered" alt="">
+                            <ul style="text-align: left">
+								<li>
+									 IAP FF DTM is a configurator for the I/A Pressure FF Devices and perform diagnosis operations with help of rich user interface.
+								</li>
+								<li>
+									Actively involved in understanding the requirements, implementation and enhancements. Involved in the preparation of Software Design Document.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Technology Used:
+                                    <strong>VC++, Visual Studio 2010, TFS
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>FF Phase 4</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/7-ffphase4.png" class="img-responsive img-centered" alt="">
+                            <ul style="text-align: left">
+								<li>
+									FFPhase4 involves extensions of FF Device and FF block objects in InFusion to support devices with capability levels and block instantiation.
+								</li>
+								<li>
+									Involved in the implementation of enhancements and bug fixes.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Technology Used:
+                                    <strong>C# .Net, Archestra IDE, Visual Studio 2010, TFS
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>M84FF Device Type Manager</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/8-m84ff.png" class="img-responsive img-centered" alt="">
+                            <ul style="text-align: left">
+								<li>
+									M84 FF DTM is a configurator for the Model 84 Vortex Foundation Fieldbus flow devices and performs diagnosis operations with help of rich user interface and also monitors measurements contained within the 84F. 
+								</li>
+								<li>
+									Involved in the design, development and bug fixes.
+								</li>
+							</ul>
+                            <ul class="list-inline item-details">
+                                <li>Technology Used:
+                                    <strong>VC++, Visual Studio 2010, TFS
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+	<script src="js/bubble.js"></script>
+</body>
+
 </html>

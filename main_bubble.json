@@ -1,0 +1,36 @@
+{
+	"name":"bubble", "children": [
+		{"name":"Front-End", 
+		"children":[
+			{"name": "HTML"},
+			{"name": "CSS"},
+			{"name": "JavaScript"},
+			{"name": "Ajax"},
+			{"name": "JSON"},
+			{"name": "Bootstrap"}
+		]},
+		{"name": "Back-End", "description": "",
+		"children":[
+			{"name": "C#"},
+			{"name": "ASP.Net"},
+			{"name": "Java"},
+			{"name": "REST API"},
+			{"name": "VC++"},
+			{"name": "C"}
+		]},
+		{"name":"Databases",
+		"children":[
+			{"name": "SQL Server"},
+			{"name": "MySQL"}
+		]},		
+		{"name":".Net Expertise", 
+		"children":[
+			{"name": "C#.Net"},
+			{"name": "ASP.Net"},
+			{"name": "ADO.Net"},
+			{"name": "WCF"},
+			{"name": "WPF"},
+			{"name": "Nhibernate"}
+		]}
+	]
+}
