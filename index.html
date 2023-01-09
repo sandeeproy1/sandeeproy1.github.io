@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>CBA Reservation</h1>
+
+<label for="datepick">Date:</label>
+<input type="date" id="datepick" name="datepick" onchange="myFunction();">
+
+<p><a href="">Court 12</a></p>
+<p><a href="">Court 13</a></p>
+<p><a href="">Court 14</a></p>
+<p><a href="">Court 15</a></p>
+<p><a href="">Court 16</a></p>
+<p><a href="">Court 17</a></p>
+<p><a href="">Court 18</a></p>
+<p><a href="">Court 19</a></p>
+<p><a href="">Court 20</a></p>
+
+<p id="demo"></p>
+
+<script>
+const courtLinks = new Map();
+courtLinks.set("Court 12", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000069&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+courtLinks.set("Court 13", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000056&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+courtLinks.set("Court 14", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000071&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+courtLinks.set("Court 15", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000072&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+courtLinks.set("Court 16", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000073&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+courtLinks.set("Court 17", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000050&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+courtLinks.set("Court 18", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000080&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+courtLinks.set("Court 19", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000083&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+courtLinks.set("Court 20", "https://clients.mindbodyonline.com/asp/appt_con.asp?loc=1&tgid=5&trnid=100000085&rtrnid=&date=XXXXXX&mask=False&STime=06:00:00%20PM&ETime=08:00:00%20PM");
+
+function myFunction() {
+    var dateArr = document.getElementById("datepick").value.split('-');
+    var dateSel = dateArr[1].toString()+"/"+dateArr[2].toString()+"/"+dateArr[0].toString();    
+    var anchors = document.getElementsByTagName("a");
+    for (var i = 0; i < anchors.length; i++) {
+	    var linkVal = courtLinks.get(anchors[i].innerHTML);
+        anchors[i].href = linkVal.replace("XXXXXX", dateSel);
+    }
+    document.getElementById("demo").innerHTML = "Updated the links to "+dateSel;
+  return;
+}
+</script>
+
+</body>
+</html>
